@@ -4,11 +4,8 @@ local function steppedOn(part)
 	local parent = part.Parent
 	if game.Players:GetPlayerFromCharacter(parent) then
 		parent.Humanoid.WalkSpeed = 75
-		parent.Humanoid.JumpPower = 100
-		print ("Hey! Look at my speed!")
-		wait(2)
+		wait(10)
 		parent.Humanoid.WalkSpeed = 16
-		parent.Humanoid.JumpPower = 50
 	end
 end
 
