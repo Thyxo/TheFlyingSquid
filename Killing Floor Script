@@ -1,0 +1,11 @@
+function onTouched(hit)
+	local human = hit.Parent:FindFirstChild("Humanoid") 
+        --Basically this just checks to see if it is a real player touching this brick.
+	if (human ~= nil) then --If it is a real player, then DESTROY THEM!
+		human.Health = 0 --Your Health Is Now 0.
+	end
+end
+
+if (script.Parent ~= nil) and (script.Parent.className == "Part") then --Work if in a block
+	connection = script.Parent.Touched:connect(onTouched)
+end
